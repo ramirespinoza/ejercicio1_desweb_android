@@ -6,23 +6,73 @@
     android:layout_height="match_parent"
     tools:context=".RegistrodeProducto">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="registro activity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="296dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:text="Registar producto"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextCodigoProducto"
+            android:layout_width="match_parent"
+            android:layout_height="48sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="20sp"
+            android:ems="10"
+            android:hint="Código de producto"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editTextNombreProducto"
+            android:layout_width="match_parent"
+            android:layout_height="48sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="20sp"
+            android:ems="10"
+            android:hint="Nombre de producto"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editTextPrecioProducto"
+            android:layout_width="match_parent"
+            android:layout_height="48sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="20sp"
+            android:ems="10"
+            android:hint="Precio de producto"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_margin="20sp"
+            android:onClick="onClick"
+            android:text="Guardar" />
+
+        <Button
+            android:id="@+id/btnRegresar"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_margin="20sp"
+            android:onClick="onClick"
+            android:text="Regresar" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

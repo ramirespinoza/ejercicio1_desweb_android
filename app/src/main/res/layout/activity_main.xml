@@ -11,28 +11,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Inventario de productos"
-        app:layout_constraintBottom_toTopOf="@+id/btnRegister"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegistrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.44" />
 
     <Button
-        android:id="@+id/btnRegister"
+        android:id="@+id/btnRegistrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="52dp"
         android:onClick="onClick"
         android:text="REGISTRAR PRODUCTO"
-        app:layout_constraintBottom_toTopOf="@+id/btnList"
+        app:layout_constraintBottom_toTopOf="@+id/btnListar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnList"
+        android:id="@+id/btnListar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="504dp"
+        android:onClick="onClick"
         android:text="Listar Producto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

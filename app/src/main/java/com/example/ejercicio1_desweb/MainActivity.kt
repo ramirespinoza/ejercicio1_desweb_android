@@ -11,21 +11,24 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //btnRegistro.setOnClickListener {}
     }
 
 
 
     fun onClick(view :View) {
-        var intent : Intent
+        var intent : Intent? = null
+
+
 
         when(view.getId()){
-            R.id.btnRegister -> {
+            R.id.btnRegistrar ->
                 intent = Intent(this, RegistroDeProducto::class.java)
-                startActivity(intent)
+            R.id.btnListar ->
+                intent = Intent(this, ListadoDeProductos::class.java)
+        }
 
-            }
-
+        if(intent!=null) {
+            startActivity(intent)
         }
     }
 }
