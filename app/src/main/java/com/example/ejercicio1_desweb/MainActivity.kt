@@ -25,6 +25,8 @@ class MainActivity : AppCompatActivity() {
                 intent = Intent(this, RegistroDeProducto::class.java)
             R.id.btnListar ->
                 intent = Intent(this, ListadoDeProductos::class.java)
+            R.id.btnListarRV ->
+                intent = Intent(this, ListadoDeProductosRV::class.java)
         }
 
         if(intent!=null) {

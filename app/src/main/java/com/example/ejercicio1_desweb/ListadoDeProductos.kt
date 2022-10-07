@@ -24,11 +24,9 @@ class ListadoDeProductos : AppCompatActivity() {
             var conexion = Connection(this, Assets.DB_NAME, null, Assets.DB_VERSION)
             var sqliteDataBase  = conexion.readableDatabase
 
-            var listViewProductos :ListView = findViewById(R.id.listViewProductos) as ListView
-            var listaProductos :ArrayList<String> = ArrayList()
+            var lvProductos :ListView = findViewById(R.id.listViewProductos) as ListView
             var productosAdapter :ProductosAdapter
             var listaProducto: ArrayList<Productos> = ArrayList()
-            var lst :List<Productos>
 
             //Guardar en cursor los datos de la tabla
             var result = sqliteDataBase.rawQuery("SELECT * FROM ${Assets.TABLA_PRODUCTO}", null)
@@ -49,8 +47,13 @@ class ListadoDeProductos : AppCompatActivity() {
             }
 
             productosAdapter = ProductosAdapter(applicationContext,R.layout.productos_adapter, listaProducto)
-            listViewProductos.adapter = productosAdapter
-            Toast.makeText(applicationContext, "Lista mostrada", Toast.LENGTH_SHORT).show()
+            lvProductos.adapter = productosAdapter
+
+            lvProductos.setOnItemClickListener { adapterView, view, position, id ->
+
+                var producto = productosAdapter.getItem(position) as Productos
+                Toast.makeText(applicationContext, producto.nombre, Toast.LENGTH_SHORT).show()
+            }
 
         } catch (e :Exception) {
             Toast.makeText(applicationContext, "Error al mostrar la lista", Toast.LENGTH_SHORT).show()
@@ -59,13 +62,10 @@ class ListadoDeProductos : AppCompatActivity() {
 
 
     fun onClick(view : View) {
-        //var intent : Intent? = null
         when(view.getId()){
             R.id.btnRegresar -> {
-                //intent = Intent(this, MainActivity::class.java)
                 onBackPressed()
             }
         }
-        //if(intent!=null) { startActivity(intent) }
     }
 }

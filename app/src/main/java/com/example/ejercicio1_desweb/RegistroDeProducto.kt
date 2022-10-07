@@ -41,7 +41,7 @@ class RegistroDeProducto : AppCompatActivity() {
             nombre.text.clear()
             precio.text.clear()
 
-            Toast.makeText(applicationContext, "Producto Registrado", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, "Producto ${this.nombre.text} Registrado", Toast.LENGTH_SHORT).show()
 
 
         } catch (e :Exception) {
@@ -50,14 +50,11 @@ class RegistroDeProducto : AppCompatActivity() {
     }
 
     fun onClick(view :View) {
-        //var intent : Intent? = null
         when(view.getId()){
             R.id.btnRegresar -> {
-                //intent = Intent(this, MainActivity::class.java)
                 onBackPressed()
             }
             R.id.btnGuardar -> {this.registrarProducto()}
         }
-        //if(intent!=null) { startActivity(intent) }
     }
 }
