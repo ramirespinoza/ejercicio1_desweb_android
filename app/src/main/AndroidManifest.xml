@@ -13,6 +13,13 @@
         android:theme="@style/Theme.Ejercicio1_desweb"
         tools:targetApi="31">
         <activity
+            android:name=".ListadoDeProductosRV"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ListadoDeProductos"
             android:exported="false">
             <meta-data
