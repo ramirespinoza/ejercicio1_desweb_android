@@ -15,6 +15,8 @@ class ListadoDeProductosRV : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listado_de_productos_rv)
+
+        this.title = "Listado Productos con RecyclerView"
         try {
             var conexion = Connection(this, Assets.DB_NAME, null, Assets.DB_VERSION)
             var sqliteDataBase  = conexion.readableDatabase
