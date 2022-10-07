@@ -1,15 +1,10 @@
 package com.example.ejercicio1_desweb.modelos
 
 class Productos {
-    private var id :Int
-        get() { TODO() }
-        set(value) {}
-    private var nombre :String
-        get() { TODO() }
-        set(value) {}
-    private var precio :Double
-        get() { TODO() }
-        set(value) {}
+    var id :Int
+    var nombre :String
+    var precio :Double
+
 
     constructor(id: Int, nombre: String, precio: Double) {
         this.id = id
@@ -17,7 +12,15 @@ class Productos {
         this.precio = precio
     }
 
-    constructor()
+    /*
+    fun getId(): Int {return this.id}
+    fun setId(value :Int) { this.id = value}
 
+    //fun getNombre(): String {return this.nombre}
+    //fun setNombre(value :String) { this.nombre = value}
+
+    fun getPrecio(): Double {return this.precio}
+    fun setPrecio(value :Double) { this.precio = value}
+*/
 
 }

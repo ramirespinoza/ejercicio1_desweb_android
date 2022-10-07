@@ -6,73 +6,94 @@
     android:layout_height="match_parent"
     tools:context=".RegistrodeProducto">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="53dp" />
 
-        <TextView
-            android:id="@+id/textView2"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="ifContentScrolls"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20sp"
-            android:text="Registar producto"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="0dp">
 
-        <EditText
-            android:id="@+id/editTextCodigoProducto"
-            android:layout_width="match_parent"
-            android:layout_height="48sp"
-            android:layout_marginStart="20sp"
-            android:layout_marginTop="20sp"
-            android:layout_marginEnd="20sp"
-            android:layout_marginBottom="20sp"
-            android:ems="10"
-            android:hint="Código de producto"
-            android:inputType="textPersonName" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:text="Registar producto"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/editTextNombreProducto"
-            android:layout_width="match_parent"
-            android:layout_height="48sp"
-            android:layout_marginStart="20sp"
-            android:layout_marginTop="20sp"
-            android:layout_marginEnd="20sp"
-            android:layout_marginBottom="20sp"
-            android:ems="10"
-            android:hint="Nombre de producto"
-            android:inputType="textPersonName" />
+            <EditText
+                android:id="@+id/editTextCodigoProducto"
+                android:layout_width="match_parent"
+                android:layout_height="48sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginBottom="20sp"
+                android:ems="10"
+                android:hint="Código de producto"
+                android:inputType="textPersonName" />
 
-        <EditText
-            android:id="@+id/editTextPrecioProducto"
-            android:layout_width="match_parent"
-            android:layout_height="48sp"
-            android:layout_marginStart="20sp"
-            android:layout_marginTop="20sp"
-            android:layout_marginEnd="20sp"
-            android:layout_marginBottom="20sp"
-            android:ems="10"
-            android:hint="Precio de producto"
-            android:inputType="textPersonName" />
+            <EditText
+                android:id="@+id/editTextNombreProducto"
+                android:layout_width="match_parent"
+                android:layout_height="48sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginBottom="20sp"
+                android:ems="10"
+                android:hint="Nombre de producto"
+                android:inputType="textPersonName" />
 
-        <Button
-            android:id="@+id/btnGuardar"
-            android:layout_width="match_parent"
-            android:layout_height="50sp"
-            android:layout_margin="20sp"
-            android:onClick="onClick"
-            android:text="Guardar" />
+            <EditText
+                android:id="@+id/editTextPrecioProducto"
+                android:layout_width="match_parent"
+                android:layout_height="48sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginBottom="20sp"
+                android:ems="10"
+                android:hint="Precio de producto"
+                android:inputType="textPersonName" />
 
-        <Button
-            android:id="@+id/btnRegresar"
-            android:layout_width="match_parent"
-            android:layout_height="50sp"
-            android:layout_margin="20sp"
-            android:onClick="onClick"
-            android:text="Regresar" />
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_margin="20sp"
+                android:onClick="onClick"
+                android:text="Guardar" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/btnRegresar"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_margin="20sp"
+                android:onClick="onClick"
+                android:text="Regresar" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
